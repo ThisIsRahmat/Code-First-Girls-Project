@@ -1,91 +1,203 @@
 
-/*RSS Style stylesheet*/
 
-/* Landing page Code */
-@import " url('https//fonts.googleapis.com/css?family=Raleway')";
-@import " url('https//fonts.googleapis.com/css?family=Oswald')";
-
-html, body {
-  margin:0;
-  padding;0;
-  height:100%;
-  width:100%;
-}
-.intro {
-  height:100vh;
-  width:100%;
-  margin: auto;
-  background: url(Background.jpg) no-repeat 50% 50%;
-  display: table;
-  top: 0;
-  background-size: cover;
-}
-
-.intro .inner{
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  max-width: none;
-}
-
-.content{
-  max-width: 500px;
-  margin: auto;
-  text-align: center;
-
-}
-
-.content h1{
-  font-family: 'Raleway', sans-serif;
+/* Index Page Code */
+ #D4AF37;
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: black;
   color: #D4AF37;
-text-transform: 0px 0px 300px #000;
-font-size: 500%;
-text-transform: uppercase;
-font-weight:300;
-text-shadow: 0 0 300px #000;
-
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0;
 }
 
-.content .btn{
-  border-radius: 9px;
-  font-family: 'Oswald', sans-serif;
+.navbar-brand{
+  float:left;
+  min-height: 55px;
+  pdding: 0 15px 5px;
+
+}
+.navbar-inverse .navbar-nav li a{
+  color: #D4AF37.;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  text-transfrom: uppercase;
+}
+
+.btn{
+  font-size: 18px;
   color: #ffff;
-  font-size: 135%;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: solid #D4AF37 3px;
-  text-transform:  uppercase;
-  text-decoration: none;
+  padding: 12px 22px;
+  background:  #D4AF37;
+  border: 2px solid #ffff;
 }
 
-.content .btn:hover{
-  color: #ffff ;
-  border: solid #D4AF37 3px;
+@media (max-width: 600px){
+  .carousel-caption{
+    display: none;
+  }
+  #icon{
+    max-width: 150px;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+}
+.container{
+  margin: 4%, auto;
+}
+
+#icon{
+  max-wdith: 200px;
+  margin: 1% auto;
+}
+
+
+footer{
+  width: 100%;
+  background-color:  #D4AF37;
+  padding:3%;
+  color:#ffff
 
 }
 
-.content p {
-  colour: #ffff;
-  font-size: 160%;
-  line-height: 210%;
-  text-align: justify;
-  margin:3%
+#logo{
+color:  #D4AF37;
+  font-size: 18px;
   font-family: sans-serif;
-  letter-spacing: 15px;
-  font-weight: lighter;
-  margin-top: 10px;
+
 }
 
-.footer {
-  colour:
+
+
+
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
 }
 
-@media(max-width: 768px) {
-  h1{
-    font-size: 300px;
-  }
-  p{
-    font-size: 17px;
-    letter-spacing: 10px;
-  }
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+         -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1,
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(ts1.jpeg);
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(ts2.jpeg);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(ts3.jpg);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }
 }
